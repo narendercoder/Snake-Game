@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /* .navbar{
     position: relative;
     background: rgb(0, 54, 12);
@@ -11,13 +12,13 @@
 } */
 .container {
     position: relative;
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     background-color: rgb(1, 122, 51);
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    
 }
 
 .board {
@@ -44,15 +45,13 @@
     height: fit-content;
 }
 .detail-2{
-    position: absolute;
+    margin-top: 100px;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    top: 50%;
-    right:30px;
-    width: 20vw;
     height: fit-content;
 }
 .d-1{
@@ -146,29 +145,33 @@
 }
 .arrow-left{
     position: relative;
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
     
 }
 .arrow-right{
     position: relative;
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
     
 }
 .arrow-up{
     position: relative;
-    width: 400px;
-    height: 100px;
+    width: 300px;
+    height: 75px;
     
 }
 .arrow-down{
     position: relative;
-    width: 400px;
-    height: 100px;
+    width: 300px;
+    height: 75px;
     
 } 
+.arrow i{
+    opacity: 0.5;
+}
 .arrow i:hover{
+    opacity: 1;
     color: white;
 }
 .arrow .fa-arrow-up:hover{
@@ -179,20 +182,16 @@
 }
 
 
-@media only screen and (max-width: 915px) {
+@media only screen and (max-width: 1000px) {
     .board{
         position: relative;
         top: 80px;
     }
-    .detail-1{
-        position: absolute;
-        width: 100vw;
-        justify-content: space-between;
-    }
-    .detail-2{
-        position: relative;
-        width: 90vmin;
-    }
+   .detail-1{
+       padding-left: 10px;
+       width: 100vw;
+       justify-content: space-between;
+   }
     #scoreBox {
         top: 0px;
         left: 10px;
@@ -201,6 +200,12 @@
         top: 9px;
         right: 10px;
     }
-
+   
  
+  }
+
+  @media only screen and (min-width: 1000px) {
+   .detail-2{
+       visibility: hidden;
+   }
   }
