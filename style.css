@@ -181,7 +181,7 @@
 }
 
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 915px) {
     .board{
         top: 80px;
     }
@@ -191,7 +191,6 @@
         justify-content: space-between;
     }
     .detail-2{
-        position: absolute;
         bottom: 10px;
         width: 90vmin;
     }
@@ -203,13 +202,5 @@
         top: 9px;
         right: 10px;
     }
-    .arrow{
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
  
   }
