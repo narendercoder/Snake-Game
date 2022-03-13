@@ -164,7 +164,7 @@ window.addEventListener('keydown', e =>{
             rightbtn.style.color ="white";
             downbtn.style.color ="black";
             leftbtn.style.color ="black";
-            uptbtn.style.color ="black";
+            upbtn.style.color ="black";
           if(lastinputDir.x !==0 )break
           inputDir = {x:1, y:0}
             break;
