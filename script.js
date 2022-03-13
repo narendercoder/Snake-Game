@@ -4,11 +4,15 @@ let foodSound = new Audio('food.mp3');
 let gameOverSound = new Audio('gameover.mp3');
 let moveSound = new Audio('move.mp3');
 let musicSound = new Audio('music.mp3');
+musicSound.play();
 let board = document.querySelector('.board');
 let music = document.getElementById('music');
+let upbtn = document.querySelector('.fa-arrow-up');
+let downbtn = document.querySelector('.fa-arrow-down');
+let leftbtn = document.querySelector('.fa-arrow-left');
+let rightbtn = document.querySelector('.fa-arrow-right');
 let speed = 8;
 let score = 0;
-musicSound.play();
 let isPlaying = false;
 let lastPaintTime = 0;
 let snakeArr = [
@@ -16,6 +20,7 @@ let snakeArr = [
 ];
 
 food = {x: 6, y: 7};
+
 
 // Game Functions
 function main(ctime) {
@@ -25,7 +30,7 @@ function main(ctime) {
     }
     lastPaintTime = ctime;
     gameEngine();
-}
+};
 
 function isCollide(snake) {
     // If you bump into yourself 
@@ -39,7 +44,7 @@ function isCollide(snake) {
         return true;
     }
     return false;
-}
+};
 
 function gameEngine(){
     // Part 1: Updating the snake array & Food
@@ -105,7 +110,7 @@ function gameEngine(){
     board.appendChild(foodElement);
 
 
-}
+};
 
 
 // Main logic starts here
@@ -129,21 +134,37 @@ window.addEventListener('keydown', e =>{
     
     switch (e.key) {
         case "ArrowUp":
+            upbtn.style.color ="white";
+            downbtn.style.color ="black";
+            leftbtn.style.color ="black";
+            rightbtn.style.color ="black";
           if(lastinputDir.y !==0 )break
            inputDir = {x:0, y:-1}
           break;
 
         case "ArrowDown":
+            downbtn.style.color ="white";
+            upbtn.style.color ="black";
+            leftbtn.style.color ="black";
+            rightbtn.style.color ="black";
            if(lastinputDir.y !==0 )break
            inputDir = {x:0, y:1}
             break;
 
         case "ArrowLeft":
+            leftbtn.style.color ="white";
+            downbtn.style.color ="black";
+            upbtn.style.color ="black";
+            rightbtn.style.color ="black";
           if(lastinputDir.x !==0 )break
             inputDir = {x:-1, y:0}
             break;
 
         case "ArrowRight":
+            rightbtn.style.color ="white";
+            downbtn.style.color ="black";
+            leftbtn.style.color ="black";
+            uptbtn.style.color ="black";
           if(lastinputDir.x !==0 )break
           inputDir = {x:1, y:0}
             break;
@@ -151,10 +172,7 @@ window.addEventListener('keydown', e =>{
     }
 
 });
-function getInputDir(){
-    lastinputDir = inputDir;
-    return inputDir;
-}
+
 
 // play music
 const playMusic = ()=>{
@@ -175,3 +193,36 @@ music.addEventListener("click",()=>{
   isPlaying ? pauseMusic() : playMusic();
 });
 
+upbtn.addEventListener("click", ()=> changedir('up'));
+leftbtn.addEventListener("click", ()=> changedir('left'));
+rightbtn.addEventListener("click", ()=> changedir('right'));
+downbtn.addEventListener("click", ()=> changedir('down'));
+const changedir =(direction) => {
+    switch (direction) {
+        case "up":
+          if(lastinputDir.y !==0 )break
+           inputDir = {x:0, y:-1}
+          break;
+
+        case "down":
+           if(lastinputDir.y !==0 )break
+           inputDir = {x:0, y:1}
+            break;
+
+        case "left":
+          if(lastinputDir.x !==0 )break
+            inputDir = {x:-1, y:0}
+            break;
+
+        case "right":
+          if(lastinputDir.x !==0 )break
+          inputDir = {x:1, y:0}
+            break;
+  
+    }
+};
+
+function getInputDir(){
+    lastinputDir = inputDir;
+    return inputDir;
+};
