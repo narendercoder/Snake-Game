@@ -191,7 +191,8 @@
         justify-content: space-between;
     }
     .detail-2{
-        bottom: 10px;
+        position: relative;
+        top: 80px;
         width: 90vmin;
     }
     #scoreBox {
