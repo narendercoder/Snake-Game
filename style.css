@@ -205,6 +205,9 @@
   }
 
   @media only screen and (min-width: 1000px) {
+       html{
+          overflow: hidden;
+      }
    .detail-2{
        visibility: hidden;
    }
