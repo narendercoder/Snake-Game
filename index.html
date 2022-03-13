@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="snakehead.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="snakehead.png" type="image/x-icon" />
     <title>Snake Game</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css" />
-</head>
-<body>
-   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div id="scoreBox">Score: 0</div>
-        <!-- <div id="hiscoreBox">High score: 0</div> -->
-        
+        <div class="detail-1">
+            <div id="scoreBox">Score: 0</div>
+            <!-- <div id="hiscoreBox">High score: 0</div> -->
             <i class="fa fa-volume-up" id="music"></i>
-        
-        <div class="board">
+          </div>
+      <div class="board"></div>
+      <div class="detail-2">
+      <div class="arrow">
+        <div class="arrow-up">
+          <i class="fa fa-arrow-up" ></i>
         </div>
+        <div class="arrow-left-right">
+          <div class="arrow-left">
+            <i class="fa fa-arrow-left" ></i>
+          </div>
+          <div class="arrow-right">
+            <i class="fa fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="arrow-down">
+          <i class="fa fa-arrow-down"></i>
+        </div>
+      </div>
     </div>
-<script src="script.js"></script>
-</body>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
