@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 /* .navbar{
     position: relative;
@@ -18,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    overflow-x: hidden;
 }
 
 .board {
@@ -51,8 +50,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    bottom: 0;
-    right:0;
+    top: 50%;
+    right:30px;
     width: 20vw;
     height: fit-content;
 }
@@ -109,8 +108,11 @@
     font-size: 39px;
     font-weight: bold;
 } */
+.arrow i{ 
+     font-size: 5rem;
+}
 
-.arrow{
+ .arrow{
       position: relative;
       display: flex;
       align-items: center;
@@ -123,53 +125,49 @@
 }
 .fa-arrow-up{
     position: relative;
-    font-size: 3rem;
     top: 0;
     left: 38%;
 }
 .fa-arrow-down{
     position: relative;
-    font-size: 3rem;
     top: 0;
     left: 38%;
 }
 .fa-arrow-left{
       position: relative;
-      font-size: 3rem;
       top: 0;
       left: 20%;
       
   }
 .fa-arrow-right{
     position: relative;
-    font-size: 3rem;
     top: 0;
     left: 30%;
 }
 .arrow-left{
     position: relative;
-    width: 100px;
-    height: 50px;
+    width: 200px;
+    height: 100px;
     
 }
 .arrow-right{
     position: relative;
-    width: 100px;
-    height: 50px;
+    width: 200px;
+    height: 100px;
     
 }
 .arrow-up{
     position: relative;
-    width: 200px;
-    height: 50px;
+    width: 400px;
+    height: 100px;
     
 }
 .arrow-down{
     position: relative;
-    width: 200px;
-    height: 50px;
+    width: 400px;
+    height: 100px;
     
-}
+} 
 .arrow i:hover{
     color: white;
 }
@@ -183,6 +181,7 @@
 
 @media only screen and (max-width: 915px) {
     .board{
+        position: relative;
         top: 80px;
     }
     .detail-1{
@@ -192,7 +191,6 @@
     }
     .detail-2{
         position: relative;
-        top: 80px;
         width: 90vmin;
     }
     #scoreBox {
@@ -203,5 +201,6 @@
         top: 9px;
         right: 10px;
     }
+
  
   }
